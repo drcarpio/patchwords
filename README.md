@@ -1,11 +1,2 @@
-# COMS4995
-
-## Initial project proposal
-
-
-### Idea 1
-Some stuff
-
-
-### Idea 2
-More stuff
+# Catalogue viewer
+A suite of creative presentation modes for art gallery catalogues and other pieces of text. 
