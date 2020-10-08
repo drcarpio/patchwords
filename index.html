@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <tr>
+                <td>Select a text file to load:</td>
+                <td><input type="file" id="fileToLoad" /></td>
+                <td>
+                    <button onclick="loadFileAsText()">
+                        Load Selected File
+                    </button>
+                </td>
+            </tr>
+        </div>
+        <div id="docView"></div>
+        <button onclick="makeNormal()" id="normal">normal</button>
+        <button onclick="makeGradient()" id="gradient">gradient</button>
+        <button onclick="makeCircle()" id="circle">circle</button>
+        <button onclick="makeUpsideDown()" id="upside-down">upside down</button>
+        <button onclick="makeShadow()" id="shadow">shadow</button>
+
+        <script>
+            var docViewMode = null
+            function loadFileAsText() {
+                var fileToLoad = document.getElementById('fileToLoad').files[0]
+
+                var fileReader = new FileReader()
+                fileReader.onload = function (fileLoadedEvent) {
+                    var textFromFileLoaded = fileLoadedEvent.target.result
+                    document.getElementById(
+                        'docView'
+                    ).innerHTML = textFromFileLoaded
+                    docViewMode = 'normal'
+                }
+
+                fileReader.readAsText(fileToLoad, 'UTF-8')
+            }
+
+            function makeNormal() {
+                document.getElementById('docView').removeAttribute('style')
+                docViewMode = 'normal'
+            }
+
+            function makeGradient() {
+                document.getElementById('docView').style.background =
+                    'linear-gradient(45deg, #f3ec78, #af4261)'
+                document.getElementById('docView').style.backgroundSize = '100%'
+                document.getElementById('docView').style.webkitBackgroundClip =
+                    'text'
+                document.getElementById('docView').style.webkitTextFillColor =
+                    'transparent'
+
+                docViewMode = 'gradient'
+            }
+
+            function makeCircle() {
+                document.getElementById('docView').style.width = '500px'
+                document.getElementById('docView').style.height = '500px'
+                document.getElementById('docView').style.borderRadius = '70%'
+                document.getElementById('docView').style.textAlign = 'center'
+
+                docViewMode = 'circle'
+            }
+
+            function makeUpsideDown() {
+                if (docViewMode == 'upside-down') {
+                    makeNormal()
+                    docViewMode = 'normal'
+                } else {
+                    document.getElementById('docView').style.transform =
+                        'rotate(180deg)'
+                    docViewMode = 'upside-down'
+                }
+            }
+
+            function makeShadow() {
+                document.getElementById('docView').style.textShadow =
+                    '1px 1px #0ff'
+                docViewMode = 'shadow'
+            }
+        </script>
+    </body>
+</html>
