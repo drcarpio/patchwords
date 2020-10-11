@@ -7,3 +7,5 @@ function addCard() {
     document.getElementById('patch').appendChild(card)
 }
 
+module.exports = addCard;
+
