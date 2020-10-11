@@ -4,7 +4,7 @@ function addCard() {
     card.classList.add('draggable')
     card.contentEditable = 'true'
     card.innerHTML = 'hello'
-    //document.getElementById('patch').appendChild(card)
+    document.getElementById('patch').appendChild(card)
 }
 
 module.exports = addCard
