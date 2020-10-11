@@ -14,110 +14,15 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="card-columns">
+        <button onClick="addCard()">add a card</button>
+        <div class="card-columns" id="patch">
             <div contenteditable="true" class="card draggable">
-                <img class="card-img-top" src="..." alt="Card image cap" />
                 <div class="card-body">
                     <h5 class="card-title">
-                        Card title that wraps to a new line
+                        This is the first card in the grid
                     </h5>
                     <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                    </p>
-                </div>
-            </div>
-            <div contenteditable="true" class="card p-3 draggable">
-                <blockquote class="blockquote mb-0 card-body">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer posuere erat a ante.
-                    </p>
-                    <footer class="blockquote-footer">
-                        <small class="text-muted">
-                            Someone famous in
-                            <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                </blockquote>
-            </div>
-            <div contenteditable="true" class="card draggable">
-                <img class="card-img-top" src="..." alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        This card has supporting text below as a natural lead-in
-                        to additional content.
-                    </p>
-                    <p class="card-text">
-                        <small class="text-muted"
-                            >Last updated 3 mins ago</small
-                        >
-                    </p>
-                </div>
-            </div>
-            <div
-                contenteditable="true"
-                class="card bg-primary text-white text-center p-3 draggable"
-            >
-                <blockquote class="blockquote mb-0">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer posuere erat.
-                    </p>
-                    <footer class="blockquote-footer">
-                        <small>
-                            Someone famous in
-                            <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                </blockquote>
-            </div>
-            <div contenteditable="true" class="card text-center draggable">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        This card has supporting text below as a natural lead-in
-                        to additional content.
-                    </p>
-                    <p class="card-text">
-                        <small class="text-muted"
-                            >Last updated 3 mins ago</small
-                        >
-                    </p>
-                </div>
-            </div>
-            <div contenteditable="true" class="card draggable">
-                <img class="card-img" src="..." alt="Card image" />
-            </div>
-            <div contenteditable="true" class="card p-3 text-right draggable">
-                <blockquote class="blockquote mb-0">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer posuere erat a ante.
-                    </p>
-                    <footer class="blockquote-footer">
-                        <small class="text-muted">
-                            Someone famous in
-                            <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                </blockquote>
-            </div>
-            <div contenteditable="true" class="card draggable">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This card has
-                        even longer content than the first to show that equal
-                        height action.
-                    </p>
-                    <p class="card-text">
-                        <small class="text-muted"
-                            >Last updated 3 mins ago</small
-                        >
+                        you can click on the card to edit the text
                     </p>
                 </div>
             </div>
@@ -142,19 +47,7 @@
                     move: dragMoveListener,
 
                     // call this function on every dragend event
-                    end(event) {
-                        var textEl = event.target.querySelector('p')
-
-                        textEl &&
-                            (textEl.textContent =
-                                'moved a distance of ' +
-                                Math.sqrt(
-                                    (Math.pow(event.pageX - event.x0, 2) +
-                                        Math.pow(event.pageY - event.y0, 2)) |
-                                        0
-                                ).toFixed(2) +
-                                'px')
-                    },
+                    end(event) {},
                 },
             })
 
@@ -173,6 +66,15 @@
                 // update the posiion attributes
                 target.setAttribute('data-x', x)
                 target.setAttribute('data-y', y)
+            }
+
+            function addCard() {
+                var card = document.createElement('div')
+                card.classList.add('card')
+                card.classList.add('draggable')
+                card.contentEditable = 'true'
+                card.innerHTML = 'hello'
+                document.getElementById('patch').appendChild(card)
             }
         </script>
         <script
