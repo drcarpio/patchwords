@@ -1,0 +1,26 @@
+{
+  "name": "patchwords",
+  "version": "1.0.0",
+  "description": "[![GitHub](https://img.shields.io/github/license/drcarpio/COMS4995)](https://img.shields.io/github/license/drcarpio/COMS4995)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jest": "^26.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drcarpio/patchwords.git"
+  },
+  "author": "jose carpio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drcarpio/patchwords/issues"
+  },
+  "homepage": "https://github.com/drcarpio/patchwords#readme"
+}
