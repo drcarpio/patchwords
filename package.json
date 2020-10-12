@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "codecov": "^3.8.0",
     "jest": "^26.5.3"
   },
   "scripts": {
