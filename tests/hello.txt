@@ -1,0 +1,5 @@
+<h2>hello</h2>
+<i>here is some cool text</i>
+<p>with html tags and stuff</p>
+<p>inside the hello.txt file</p>
+<p>some <b>cool</b> text</p>
