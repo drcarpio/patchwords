@@ -6,12 +6,12 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {
-    "jest": "^26.5.2"
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.5.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "jest && codecov"
   },
   "repository": {
     "type": "git",
