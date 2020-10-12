@@ -34,6 +34,9 @@ describe('add card', () => {
     test('add card without text parameter', () => {
         addCard()
         expect(document.getElementById('patch').childElementCount).toEqual(2)
+        expect(
+            document.getElementById('patch').lastElementChild.innerHTML
+        ).toEqual('hello')
     })
 
     test('add card with text parameter', () => {
