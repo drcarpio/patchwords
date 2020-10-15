@@ -3,6 +3,7 @@
 [![GitHub](https://img.shields.io/github/license/drcarpio/patchwords)](https://img.shields.io/github/license/drcarpio/patchwords)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/drcarpio/patchwords/CI/master)](https://img.shields.io/github/workflow/status/drcarpio/patchwords/CI/master)
 [![codecov](https://codecov.io/gh/drcarpio/patchwords/branch/master/graph/badge.svg)](https://codecov.io/gh/drcarpio/patchwords)
+[![Docs](https://img.shields.io/readthedocs/patchwords.svg)](https://patchwords.readthedocs.io)
 
 
 
