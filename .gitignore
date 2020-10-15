@@ -1,2 +1,5 @@
 .DS_store
 node_modules
+docs/_build
+docs/_static
+docs/_templates
