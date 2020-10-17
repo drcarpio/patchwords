@@ -1,3 +1,6 @@
+/*global interact*/
+/*eslint no-undef: "error"*/
+
 interact('.draggable').draggable({
     // enable inertial throwing
     inertia: true,
