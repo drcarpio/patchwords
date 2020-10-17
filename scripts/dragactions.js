@@ -16,7 +16,7 @@ interact('.draggable').draggable({
         move: dragMoveListener,
 
         // call this function on every dragend event
-        end(event) {},
+        end() {},
     },
 })
 
