@@ -37,6 +37,8 @@ function addImgCard(img) {
 }
 
 function uploadImages(files) {
+    var imgFile
+
     for (imgFile of files) {
         const reader = new FileReader()
         reader.addEventListener('load', (f) => {
