@@ -5,3 +5,7 @@
 .img-input {
     visibility: hidden;
 }
+
+.card-columns {
+    column-count: 4;
+}

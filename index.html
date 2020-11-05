@@ -13,7 +13,7 @@
         <link
             rel="shortcut icon"
             type="image/x-icon"
-            href="images/favicon.svg"
+            href="images/logo-condensed.svg"
         />
 
         <title>Document</title>
@@ -42,6 +42,13 @@
             multiple
         />
 
+        <input
+            type="color"
+            id="colorpicker"
+            name="color"
+            onchange="changeColor(this.value)"
+        />
+
         <div class="card-columns" id="patch">
             <div contenteditable="true" class="card draggable">
                 <div class="card-body">
@@ -58,6 +65,8 @@
         <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
         <script type="text/javascript" src="scripts/dragactions.js"></script>
         <script type="text/javascript" src="scripts/cards.js"></script>
+        <script type="text/javascript" src="scripts/customize.js"></script>
+
         <script
             src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
