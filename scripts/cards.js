@@ -20,6 +20,35 @@ function addTxtCard(file) {
     hideTxtInput()
 }
 
+function addImgCard(img) {
+    var card = document.createElement('div')
+    card.classList.add('card')
+    card.classList.add('draggable')
+
+    var image = document.createElement('img')
+    image.src = img
+    image.alt = 'image card'
+    image.style.width = '100%'
+    image.style.height = 'auto'
+
+    card.appendChild(image)
+
+    document.getElementById('patch').appendChild(card)
+}
+
+function uploadImages(files) {
+    for (imgFile of files) {
+        const reader = new FileReader()
+        reader.addEventListener('load', (f) => {
+            let img = f.target.result
+            addImgCard(img)
+        })
+        reader.readAsDataURL(imgFile)
+    }
+
+    hideImgInput()
+}
+
 function showTxtInput() {
     document.getElementById('file-input').style.visibility = 'visible'
     document.getElementById('fileInputToggle').innerHTML = 'cancel upload'
@@ -34,9 +63,26 @@ function hideTxtInput() {
     document.getElementById('fileInputToggle').onclick = showTxtInput
 }
 
+function showImgInput() {
+    document.getElementById('image-input').style.visibility = 'visible'
+    document.getElementById('imageInputToggle').innerHTML = 'cancel upload'
+    document.getElementById('imageInputToggle').onclick = hideImgInput
+}
+
+function hideImgInput() {
+    document.getElementById('image-input').style.visibility = 'hidden'
+    document.getElementById('image-input').value = ''
+    document.getElementById('imageInputToggle').innerHTML = 'add image card'
+    document.getElementById('imageInputToggle').onclick = showImgInput
+}
+
 module.exports = {
     addCard,
     addTxtCard,
+    addImgCard,
+    uploadImages,
     showTxtInput,
     hideTxtInput,
+    showImgInput,
+    hideImgInput,
 }

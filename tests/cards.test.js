@@ -3,6 +3,8 @@ const {
     addTxtCard,
     showTxtInput,
     hideTxtInput,
+    showImgInput,
+    hideImgInput,
 } = require('../scripts/cards.js')
 
 describe('add card', () => {
@@ -10,13 +12,23 @@ describe('add card', () => {
         document.body.innerHTML = `
             <button id="addCardBtn" onclick="addCard()">add a card</button>
             <button id="fileInputToggle" onclick="showTxtInput()">add a card from txt file</button>
+            <button id="imageInputToggle" onclick="showImgInput()">
+            add a image card
+            </button>
+            
             <input
                 type="file"
                 id="file-input"
                 class="txt-input"
-                onchange="addTxtCard(this)"
-                style="visibility:hidden"
+                onchange="addTxtCard(this.files[0])"
             />
+            <input
+                type="file"
+                id="image-input"
+                class="img-input"
+                onchange="uploadImages(this.files)"
+            />
+
             <div id="patch" class="card-columns" >
                 <div contenteditable="true" class="card draggable">
                     <div class="card-body">
@@ -80,6 +92,31 @@ describe('add card', () => {
 
         fileInputToggle.click()
         expect(document.getElementById('file-input').style.visibility).toEqual(
+            'hidden'
+        )
+    })
+
+    test('show image input button works', () => {
+        const imageInputToggle = document.getElementById('imageInputToggle')
+        imageInputToggle.onclick = showImgInput
+        imageInputToggle.click()
+
+        expect(document.getElementById('image-input').style.visibility).toEqual(
+            'visible'
+        )
+    })
+
+    test('cancel image input button works', () => {
+        const imageInputToggle = document.getElementById('imageInputToggle')
+        imageInputToggle.onclick = showImgInput
+        imageInputToggle.click()
+
+        expect(document.getElementById('imageInputToggle').onclick).toEqual(
+            hideImgInput
+        )
+
+        imageInputToggle.click()
+        expect(document.getElementById('image-input').style.visibility).toEqual(
             'hidden'
         )
     })
