@@ -12,3 +12,7 @@ A tool for creating and sharing editable card collages. Useful for making vision
 
 ## live demo here
 http://patchwords-demo.herokuapp.com/
+
+
+here is an example of what you can do with patchwords:
+![patchwords example with cats](https://github.com/drcarpio/patchwords/blob/master/images/cat-example.png)
