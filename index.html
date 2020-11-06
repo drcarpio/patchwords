@@ -21,7 +21,7 @@
     <body>
         <button id="addCardBtn" onclick="addCard()">add a card</button>
         <button id="fileInputToggle" onclick="showTxtInput()">
-            add a card from txt file
+            add a card from .txt file
         </button>
         <button id="imageInputToggle" onclick="showImgInput()">
             add an image card
@@ -30,6 +30,7 @@
             type="file"
             id="file-input"
             class="txt-input"
+            accept=".txt"
             onchange="addTxtCard(this.files[0])"
         />
 
