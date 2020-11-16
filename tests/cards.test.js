@@ -1,6 +1,5 @@
 const {
     addCard,
-    addTxtCard,
     showTxtInput,
     hideTxtInput,
     showImgInput,
