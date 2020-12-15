@@ -50,6 +50,15 @@
             onchange="changeColor(this.value)"
         />
 
+        <input
+            type="number"
+            min="1"
+            max="6"
+            step="1"
+            value="4"
+            onchange="changeColumns(event.target.value)"
+        />
+
         <div class="card-columns" id="patch">
             <div contenteditable="true" class="card draggable">
                 <div class="card-body">
