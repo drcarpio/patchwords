@@ -1,0 +1,36 @@
+#delete-dropzone {
+    height: 140px;
+}
+
+.dropzone {
+    background-color: lightgray;
+    border: dashed 4px transparent;
+    border-radius: 4px;
+    margin: 10px auto 30px;
+    padding: 10px;
+    width: 40%;
+    transition: background-color 0.3s;
+}
+
+.drop-active {
+    border-color: #aaa;
+}
+
+.drop-target {
+    background-color: rgb(255, 71, 71);
+    border-color: #fff;
+    border-style: solid;
+}
+
+.drag-drop {
+    touch-action: none;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+
+    transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+    color: #000;
+    background-color: #4e4;
+}
