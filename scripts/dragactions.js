@@ -58,7 +58,6 @@ interact('.dropzone').dropzone({
         event.relatedTarget.classList.remove('can-drop')
     },
     ondrop: function (event) {
-        console.log(event.relatedTarget)
         document.getElementById('patch').removeChild(event.relatedTarget)
     },
     ondropdeactivate: function (event) {

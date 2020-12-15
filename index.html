@@ -20,17 +20,58 @@
         <title>patchwords</title>
     </head>
     <body>
-        <button id="addCardBtn" onclick="addCard()">add a card</button>
-        <button id="fileInputToggle" onclick="showTxtInput()">
-            add a card from .txt file
-        </button>
-        <button id="imageInputToggle" onclick="showImgInput()">
-            add an image card
-        </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">
+                <img src="images/original-logo.png" width="40" height="40" />
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <button
+                            class="btn btn-outline-dark"
+                            id="addCardBtn"
+                            onclick="addCard()"
+                        >
+                            add a card
+                        </button>
+                    </li>
+                    <li>
+                        <label class="btn btn-outline-dark" for="file-input"
+                            >add card from .txt</label
+                        >
+                    </li>
+                    <li>
+                        <label class="btn btn-outline-dark" for="image-input"
+                            >add an image card</label
+                        >
+                    </li>
+                    <li>
+                        <input
+                            type="color"
+                            id="colorpicker"
+                            name="color"
+                            onchange="changeColor(this.value)"
+                        />
+                    </li>
+                    <li>
+                        <input
+                            type="number"
+                            min="1"
+                            max="6"
+                            step="1"
+                            value="4"
+                            onchange="changeColumns(event.target.value)"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <input
             type="file"
             id="file-input"
-            class="txt-input"
+            class="txt-input btn but-outline-dark"
             accept=".txt"
             onchange="addTxtCard(this.files[0])"
         />
@@ -42,22 +83,6 @@
             class="img-input"
             onchange="uploadImages(this.files)"
             multiple
-        />
-
-        <input
-            type="color"
-            id="colorpicker"
-            name="color"
-            onchange="changeColor(this.value)"
-        />
-
-        <input
-            type="number"
-            min="1"
-            max="6"
-            step="1"
-            value="4"
-            onchange="changeColumns(event.target.value)"
         />
 
         <div class="card-columns" id="patch">

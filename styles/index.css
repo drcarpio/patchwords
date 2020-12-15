@@ -13,3 +13,7 @@ body {
 .card-columns {
     column-count: 4;
 }
+
+label {
+    cursor: pointer;
+}
