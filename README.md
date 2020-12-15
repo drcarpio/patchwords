@@ -15,4 +15,4 @@ http://patchwords-demo.herokuapp.com/
 
 
 here is an example of what you can do with patchwords:
-![patchwords example with cats](https://github.com/drcarpio/patchwords/blob/master/images/cat-example.png)
+![patchwords example with cats](https://github.com/drcarpio/patchwords/blob/master/images/cat-example-2.png)
