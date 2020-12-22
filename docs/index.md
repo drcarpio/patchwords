@@ -1,12 +1,9 @@
 # Welcome to patchwords's documentation!
 
-## header
+# patchwords
 
--   these
--   are
--   bullets
+A tool for creating and sharing editable card collages. Useful for making vision boards, storyboading, and patchwork writing.
 
-```eval_rst
-.. note::
-   We can still mix rst
-```
+## live demo here
+
+http://patchwords-demo.herokuapp.com/
